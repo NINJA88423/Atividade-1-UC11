@@ -9,6 +9,6 @@ primeiro, há uma tela para cadstrar os produtos, inserindo o nome e o valor, e 
 
 As tecnologias utilizadas foram o java para a criação do sistema e o MySQL para a acriação do banco de dados sql.
 
-# Última atualização: 26/03/2026
+# Última atualização: 26/03/2026 > 2
 
-Foi definida a tela 'cadastroVIEW.form' que será a primeira tela que será aberta ao executar o programa.
+Foi definida a tela 'cadastroVIEW.form' que será a única tela que fechará o progama assim que for clicado o 'x' na parte superior direita da tela.
