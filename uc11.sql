@@ -1,5 +1,5 @@
-create database if not exists uc11;
-use uc11;
+CREATE DATABASE IF NOT EXISTS uc11;
+USE uc11;
 
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -16,7 +16,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `produtos` (
   `id` bigint(20) auto_increment NOT NULL primary key,
   `nome` text DEFAULT NULL,
-  `valor` int(11) DEFAULT NULL,
+  `valor` decimal(10, 2) DEFAULT NULL,
   `status` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -27,3 +27,28 @@ SELECT * FROM `produtos`;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+DELIMITER $$
+
+
+-- 	Função que altera automáticamente o valor primitivo de INT
+-- 	para DECIMAL da coluna "valor" da tabela "produtos".
+CREATE PROCEDURE IntToDecimal() BEGIN
+
+	DECLARE tipo_coluna VARCHAR(64);
+     
+	SELECT DATA_TYPE INTO tipo_coluna
+		FROM INFORMATION_SCHEMA.COLUMNS
+		WHERE TABLE_NAME = 'produtos'
+		AND COLUMN_NAME = 'valor'
+		AND TABLE_SCHEMA = DATABASE();
+    
+    IF tipo_coluna = 'int' THEN
+        ALTER TABLE `produtos` MODIFY COLUMN `valor` DECIMAL(10,2);
+    END IF;
+    
+END$$
+
+
+DELIMITER ;

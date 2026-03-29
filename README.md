@@ -9,10 +9,6 @@ primeiro, há uma tela para cadstrar os produtos, inserindo o nome e o valor, e 
 
 As tecnologias utilizadas foram o java para a criação do sistema e o MySQL para a acriação do banco de dados sql.
 
-# Última atualização: 28/03/2026
+# Última atualização: 28/03/2026 > 2
 
-Foi inserida novas mensagens de erro de JOptionPane no projeto, com mensagens para:
-> Erro ao se conectar com banco de dados;
-> Inserção de valor inválido no campo de texto na tela CadastroVIEW;
-> Falha no cadastro de produto por falha ao acesso ao banco de dados;
-> Falha de atualização da lista de produtos da tela ListagemVIEW;
+O valor primitivo do valor do produto foi alterado no código java e no banco de dados sql. Agora o projeto java utiliza BigDecimal ao envés de Int, e o código do MySQL utiliza DECIMAL(10,2) ao envés de INT(11), além de que o código MySQL agora tem um procedure que serve para converter a coluna `valor` de produtos armazenados já existentes (INT(11) para DECIMAL(10, 2))
