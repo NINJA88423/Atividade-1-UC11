@@ -9,6 +9,6 @@ primeiro, há uma tela para cadstrar os produtos, inserindo o nome e o valor, e 
 
 As tecnologias utilizadas foram o java para a criação do sistema e o MySQL para a acriação do banco de dados sql.
 
-# Última atualização: 01/04/2026 > 6
+# Última atualização: 01/04/2026
 
-Agora é possível acessar a tela ListagemVendidosVIEW clicando no botão "Consultar Vendas" em ListagemVIEW, e também foi removido o método main da tela ListagemVendidosVIEW por não ser mais necessario
+Foram adicionado todas as melhorias feitas na antiga branch "melhorias". Podendo agora consultar uma lista dos produtos vendidos e vender produtos.
