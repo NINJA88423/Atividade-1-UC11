@@ -9,6 +9,6 @@ primeiro, há uma tela para cadstrar os produtos, inserindo o nome e o valor, e 
 
 As tecnologias utilizadas foram o java para a criação do sistema e o MySQL para a acriação do banco de dados sql.
 
-# Última atualização: 31/03/2026 > 3
+# Última atualização: 01/04/2026 > 4
 
-Foi implementada a nova tela(classe-view) ListagemVendasVIEW, que vai mostrar uma lista de todos os produtos que foram vendidos. O método main não foi removido para a lista ser testada, mas o método será removido em atualizações futuras
+Foi atualizada o método venderProduto() de ProdutosDAO. Agora o parâmetro é um id, no qual, sera usado para identificar o produto cadastrado, para que assim, possa ser vendido.
