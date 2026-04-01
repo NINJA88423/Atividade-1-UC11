@@ -9,6 +9,6 @@ primeiro, há uma tela para cadstrar os produtos, inserindo o nome e o valor, e 
 
 As tecnologias utilizadas foram o java para a criação do sistema e o MySQL para a acriação do banco de dados sql.
 
-# Última atualização: 01/04/2026 > 4
+# Última atualização: 01/04/2026 > 5
 
-Foi atualizada o método venderProduto() de ProdutosDAO. Agora o parâmetro é um id, no qual, sera usado para identificar o produto cadastrado, para que assim, possa ser vendido.
+O botão "Vender" com o método btnVenderActionPerformed() em ListagemVIEW agora pode vender o produto inserindo o id em id_produto_venda(JTextPane)
